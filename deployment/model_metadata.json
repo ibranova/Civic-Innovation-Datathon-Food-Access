@@ -1,0 +1,68 @@
+{
+  "model_name": "Food Coverage Predictor",
+  "model_type": "Logistic Regression",
+  "version": "2.0",
+  "features": [
+    "food_insecure_percentage",
+    "unemployment_rate", 
+    "high_shelter_flag",
+    "has_kitchen",
+    "has_weekend"
+  ],
+  "metrics": {
+    "accuracy": 0.86,
+    "precision_low": 0.82,
+    "precision_high": 0.91,
+    "recall_low": 0.92,
+    "recall_high": 0.80,
+    "f1_low": 0.87,
+    "f1_high": 0.85
+  },
+  "confusion_matrix": {
+    "true_negative": 23,
+    "false_positive": 2,
+    "false_negative": 5,
+    "true_positive": 20
+  },
+  "training_info": {
+    "total_samples": 197,
+    "test_samples": 50
+  },
+  "feature_statistics": {
+    "food_insecure_percentage": {
+      "mean": 16.52,
+      "std": 6.62,
+      "min": 2.92,
+      "max": 35.99,
+      "median": 15.21
+    },
+    "unemployment_rate": {
+      "mean": 7.68,
+      "std": 2.98,
+      "min": 1.38,
+      "max": 17.0,
+      "median": 7.17
+    },
+    "high_shelter_flag": {
+      "mean": 0.25,
+      "std": 0.43,
+      "min": 0.0,
+      "max": 1.0,
+      "median": 0.0
+    },
+    "has_kitchen": {
+      "mean": 0.36,
+      "std": 0.48,
+      "min": 0.0,
+      "max": 1.0,
+      "median": 0.0
+    },
+    "has_weekend": {
+      "mean": 0.50,
+      "std": 0.50,
+      "min": 0.0,
+      "max": 1.0,
+      "median": 1.0
+    }
+  }
+}
