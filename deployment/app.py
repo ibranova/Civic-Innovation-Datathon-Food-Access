@@ -146,17 +146,25 @@ st.markdown("""
 # =============================================================================
 # LOAD MODEL AND DATA
 # =============================================================================
+import os
+
+# Get the directory where app.py is located
+APP_DIR = os.path.dirname(os.path.abspath(__file__))
+
 @st.cache_resource
 def load_model():
-    return joblib.load("/Users/Marcy_Student/Desktop/Marcy_Projects/CID_Food_Access/deployment/coverage_model.pkl")
+    model_path = os.path.join(APP_DIR, "coverage_model.pkl")
+    return joblib.load(model_path)
 
 @st.cache_resource
 def load_scaler():
-    return joblib.load("/Users/Marcy_Student/Desktop/Marcy_Projects/CID_Food_Access/deployment/scaler.pkl")
+    scaler_path = os.path.join(APP_DIR, "scaler.pkl")
+    return joblib.load(scaler_path)
 
 @st.cache_data
 def load_metadata():
-    with open("/Users/Marcy_Student/Desktop/Marcy_Projects/CID_Food_Access/deployment/model_metadata.json", "r") as f:
+    meta_path = os.path.join(APP_DIR, "model_metadata.json")
+    with open(meta_path, "r") as f:
         return json.load(f)
 
 try:
