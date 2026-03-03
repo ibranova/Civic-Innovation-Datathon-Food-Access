@@ -148,15 +148,15 @@ st.markdown("""
 # =============================================================================
 @st.cache_resource
 def load_model():
-    return joblib.load("coverage_model.pkl")
+    return joblib.load("/Users/Marcy_Student/Desktop/Marcy_Projects/CID_Food_Access/deployment/coverage_model.pkl")
 
 @st.cache_resource
 def load_scaler():
-    return joblib.load("scaler.pkl")
+    return joblib.load("/Users/Marcy_Student/Desktop/Marcy_Projects/CID_Food_Access/deployment/scaler.pkl")
 
 @st.cache_data
 def load_metadata():
-    with open("model_metadata.json", "r") as f:
+    with open("/Users/Marcy_Student/Desktop/Marcy_Projects/CID_Food_Access/deployment/model_metadata.json", "r") as f:
         return json.load(f)
 
 try:
