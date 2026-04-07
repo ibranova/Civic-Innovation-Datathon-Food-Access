@@ -1,9 +1,9 @@
 # Beyond the Pantry
 - NYC Food Coverage Predictor (Neighborhood Tabulation Area (NTA)-level)
-- Identifying where Emergency Food Assistance Program (EFAP) supply does not scale with structural vulnerability across NYC neighborhoods.
+- Identifying where the Emergency Food Assistance Program (EFAP) supply does not scale with structural vulnerability across NYC neighborhoods.
 
 ## Key Takeaway
-- In 2024, EFAP site coverage is not evenly aligned with structural vulnerability across NYC Neighborhood Tabulation Areas (NTAs). Among high-priority NTAs (top 25% by structural vulnerability), 56% fall below the city median coverage, and 16% have zero EFAP sites. Statistical testing also shows that coverage differs meaningfully between high-priority and other NTAs (p = 0.001167), supporting the conclusion that misalignment is real, not noise.
+- In 2024, EFAP site coverage is not evenly aligned with structural vulnerability across NYC Neighborhood Tabulation Areas (NTAs). Among high-priority NTAs (top 25% by structural vulnerability), 56% fall below the city median coverage, and 16% have zero EFAP sites. Statistical testing also shows that coverage differs meaningfully between high-priority and other NTAs (p = 0.001167), supporting the conclusion that misalignment is real rather than noise.
 
 
 ## Critical Research Question
@@ -11,11 +11,11 @@
 
 
 ### Why this matters
-- Food insecurity is not just about hunger. It is shaped by structural conditions like unemployment, household vulnerability, and where families are already under pressure. EFAP is one of NYC’s emergency food supports, so if EFAP supply does not scale with vulnerability, the neighborhoods with the highest need can be systematically under-served.
+- Food insecurity is not just about hunger. It is shaped by structural conditions like unemployment, household vulnerability, and where families are already under pressure. EFAP is one of NYC’s emergency food supports, so if EFAP supply does not scale with vulnerability, the neighborhoods with the highest need can be systematically underserved.
 
 ### Data sources (2024 focus)
 - This project integrates multiple NYC civic datasets at the NTA level.
-  - NYC Neighborhood Prioritization / vulnerability indicators (structural vulnerability inputs)
+  - NYC Neighborhood Prioritization/vulnerability indicators (structural vulnerability inputs)
   - EFAP site locations and service attributes (food supply)
   - Shelter context indicators (used as added context and in the model as an “extended feature”)
   - NTA geography (for mapping and joins)
@@ -45,9 +45,9 @@
 🔗 Tableau Public Dashboard (CID Food Access – Dashboard): [https://public.tableau.com/views/CID-foodaccess/Dashboard2](https://public.tableau.com/app/profile/ibrahima.diallo4653/viz/FoodInsecurityAnalysisinNYC/Dashboard3)
 - The dashboard is designed as a narrative:
   1. Pressure (structural vulnerability context)
-     - Map shows how food insecurity pressure varies across NTAs.
+     - The map shows how food insecurity pressure varies across NTAs.
   2. Supply distribution (EFAP presence)
-     - Bar chart shows how EFAP sites are distributed across NTAs.
+     - The bar chart shows how EFAP sites are distributed across NTAs.
      - With a borough filter, it shows where EFAP supply is concentrated within that borough.
   3. Alignment vs misalignment (4-zone view)
      - We split the city into four zones using medians of:
@@ -58,8 +58,8 @@
          - **Under-Served**: higher vulnerability + lower coverage
          - **Over-Served**: lower vulnerability + higher coverage
          - **Lower Priority**: lower vulnerability + lower coverage
-  4. Action view (zoom into the under-served zone)
-     - A ranked list of high-priority NTAs ordered by Coverage Ratio from lowest upward.
+  4. Action view (zoom into the underserved zone)
+     - A ranked list of high-priority NTAs ordered by Coverage Ratio from lowest to highest.
      - This is meant to answer: “Where should decision makers act first?”
      - _Why there are 0s in the action chart_: A 0% coverage value means an NTA has zero EFAP sites in the EFAP dataset, so the Coverage Ratio becomes zero. Those NTAs represent the most severe supply gaps because there is no EFAP presence at all.
 
@@ -76,7 +76,7 @@
 - **KPI 3: “% of high-priority NTAs with zero EFAP sites”**
   - This tells us: How many of the most vulnerable neighborhoods have no EFAP sites at all?
   - In our results, 16% of high-priority NTAs have zero EFAP sites.
-  - City median coverage matters in this context because the median is the “middle neighborhood” benchmark. Half of NTAs are above it and half are below it. We use it to avoid extreme outliers and to make the “under-served vs not under-served” classification clear and defensible.
+  - City median coverage matters in this context because the median is the “middle neighborhood” benchmark. Half of NTAs are above it, and half are below it. We use it to avoid extreme outliers and to make the “under-served vs not under-served” classification clear and defensible.
 
 
 
@@ -89,10 +89,10 @@
   - Outcome: Coverage Ratio
 
 ##### Why we used Welch’s t-test**
-- We checked assumptions and found: Coverage Ratio is not normally distributed and roup variances are not equal. So we used Welch’s t-test, which is designed for unequal variances. The Welch’s t-test p-value = `0.001167`
+- We checked assumptions and found: Coverage Ratio is not normally distributed, and group variances are not equal. So we used Welch’s t-test, which is designed for unequal variances. The Welch’s t-test p-value = `0.001167`
   - This is statistically significant, meaning the observed difference is unlikely to be random.
   - Effect size: Cohen’s d = `0.3526`
-    - This suggests a small-to-moderate practical difference. The effect is not just “statistically significant”, it is meaningful enough to care about in planning decisions.
+    - This suggests a small-to-moderate practical difference. The effect is not just “statistically significant”; it is meaningful enough to care about in planning decisions.
 
 ###### Interpretation
 - Coverage gaps are not evenly spread. High-priority neighborhoods are more likely to have worse coverage patterns, supporting the dashboard story that supply does not reliably scale with vulnerability.
@@ -194,9 +194,9 @@ Data integration and predictive analysis reveal priority zones where targeted in
 
 ## Ethics & Equity
 
-This project centers children and families experiencing homelessness, recognizing that institutional datasets often reflect system-level perspectives rather than lived experience.
+This project centers on children and families experiencing homelessness, recognizing that institutional datasets often reflect system-level perspectives rather than lived experience.
 Findings are framed to avoid harm, prevent misinterpretation, and support equitable policy decisions rather than surveillance or deficit narratives.
-Shelter data are not available at the individual shelter-site or exact neighborhood location level, we cannot make causal claims about how specific food programs affect shelter residents.
+Since shelter data are not available at the individual shelter-site or exact neighborhood location level, we cannot make causal claims about how specific food programs affect shelter residents.
 
 ---
 
@@ -225,15 +225,7 @@ ai_process.md — Documentation on ethical AI usage
 
 ## Data Source Attribution
 
-We acknowledge and appreciate the work of the New York City Open Data program and associated municipal agencies in making these datasets publicly available for civic research and analysis.
-
----
-
-## Contributors and Roles
-
-- **Angel Bautista — Project Manager** | [LinkedIn](https://www.linkedin.com/in/angelgbautista/)
-- **Ayema Qureshi — Analytics Engineer / Data Modeler** | [LinkedIn](https://www.linkedin.com/in/ayemaqureshi/)
-- **Ibrahima Diallo — Data Engineer / ETL Lead** | [LinkedIn](https://www.linkedin.com/in/ibranova/)
+I acknowledge and appreciate the work of the New York City Open Data program and associated municipal agencies in making these datasets publicly available for civic research and analysis.
 
 ---
 
