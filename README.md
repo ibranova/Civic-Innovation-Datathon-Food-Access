@@ -42,7 +42,7 @@
   - _Predictive modeling_ (Model): Predict whether an NTA is likely to be a low coverage area using structural + service context features.
 
 #### Dashboard (Tableau) story
-🔗 Tableau Public Dashboard (CID Food Access – Dashboard): https://public.tableau.com/views/CID-foodaccess/Dashboard2
+🔗 Tableau Public Dashboard (CID Food Access – Dashboard): [https://public.tableau.com/views/CID-foodaccess/Dashboard2](https://public.tableau.com/app/profile/ibrahima.diallo4653/viz/FoodInsecurityAnalysisinNYC/Dashboard3)
 - The dashboard is designed as a narrative:
   1. Pressure (structural vulnerability context)
      - Map shows how food insecurity pressure varies across NTAs.
